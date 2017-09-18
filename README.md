@@ -31,10 +31,13 @@ If you're low on disk space, using Windows or having slow internet connection, t
 In order to use this container with Play with Docker:
 
 * Please visit  [Play With Docker](http://labs.play-with-docker.com/) site
-* Click on `Add New Instance` (occasionally this might freeze, if that happens please re-visit the site)
-* On the terminal window, type `docker run -d -p 8787:8787 alperyilmaz/verse-gviz` and hit enter
-* After the process finished successfully, you'll see a link `8787` on top of the page
+* (1) Click on `Add New Instance` (occasionally this might freeze, if that happens please re-visit the site)
+  ![new instance button](pwd1.png)
+* (2) On the terminal window, type `docker run -d -p 8787:8787 alperyilmaz/verse-gviz` and hit enter
+* (3,4) After the process finished successfully, you'll see a link `8787` on top of the page
 * When you click the link, you'll be at Rstudio server login page (username and passwords are `rstudio`)
-* Happy reproducible researching ;)
+* (5) **IMPORTANT** While using play with docker the instances have certain time limit (4 hours at the time of writing this note). When an instance is killed all data will be lost. So please copy over unsaved data to your local folder or git push frequently to prevent loss of data.
 
-> **IMPORTANT** While using play with docker the instances have certain time limit (4 hours at the time of writing this note). When an instance is killed all data will be lost. So please copy over unsaved data to your local folder or git push frequently to prevent loss of data.
+![annotated-instructions](pwd2-annotated.png)
+
+Happy reproducible researching ;)
