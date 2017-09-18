@@ -22,7 +22,11 @@ docker run -d -p 8787:8787 alperyilmaz/verse-gviz
 
 In the first run `verse-gviz` container will be downloaded and it might take time based on your internet connection. Following runs will be instant.
 
-After running this command, go to your browser and visit `http://localhost:8787` and you'll be greeted with Rstudio server login page. Both username and passwords are same which is `rstudio`.
+After running this command, go to your browser and visit `http://localhost:8787` and you'll be greeted with Rstudio server login page. Both username and passwords are same which is `rstudio`. If needed be, rstudio server can be initiated with desired username and passwords with following command:
+
+```
+docker run -d -p 8787:8787 -e USER="studentno" -e PASSWORD="studentpass" alperyilmaz/verse-gviz
+```
 
 ## Play with Docker usage
 
