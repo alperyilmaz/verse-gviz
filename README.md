@@ -36,3 +36,5 @@ In order to use this container with Play with Docker:
 * After the process finished successfully, you'll see a link `8787` on top of the page
 * When you click the link, you'll be at Rstudio server login page (username and passwords are `rstudio`)
 * Happy reproducible researching ;)
+
+> **IMPORTANT** While using play with docker the instances have certain time limit (4 hours at the time of writing this note). When an instance is killed all data will be lost. So please copy over unsaved data to your local folder or git push frequently to prevent loss of data.
