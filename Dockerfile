@@ -33,4 +33,4 @@ RUN > rscript.R \
     && echo 'biocLite("TxDb.Mmusculus.UCSC.mm9.knownGene",ask=FALSE)' >> rscript.R \
     && echo 'biocLite("TxDb.Hsapiens.UCSC.hg19.knownGene",ask=FALSE)' >> rscript.R \
     && Rscript rscript.R \
-    && rm /tmp/downloaded_packages/*
+    && rm -rf /tmp/Rtmp*/downloaded_packages/*
