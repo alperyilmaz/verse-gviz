@@ -7,7 +7,7 @@
 FROM rocker/verse:3.4.1
 LABEL maintainer="alperyilmaz@gmail.com"
 
-RUN apt-get update && apt-get install -y --no-install-recommends imagemagick libudunits2-dev \
+RUN apt-get update && apt-get install -y --no-install-recommends imagemagick libudunits2-dev libgsl-dev \
     && rm /var/lib/dpkg/info/* \
     && rm /var/lib/apt/lists/*debian*
 
