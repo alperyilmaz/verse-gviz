@@ -4,7 +4,7 @@
 #### Dockerfile contents
 
 # standing on shoulders of giants
-FROM rocker/verse:3.4.1                     
+FROM rocker/verse:3.4.1
 LABEL maintainer="alperyilmaz@gmail.com"
 
 RUN apt-get update && apt-get install -y --no-install-recommends imagemagick libudunits2-dev \
@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends imagemagick lib
 ## but still need to maintain a list for local install
 ## bookdown data.table devtools git2r igraph Lahman maps microbenchmark nycflights13 PKI RefManageR rmarkdown RMySQL rsconnect RSQLite shiny splines tidyverse zoo
 
-RUN install2.r animation blogdown caret citr corrplot DT e1071 feather flexdashboard formatR gapminder ggiraph ggraph ggrepel ggplot2movies gutenbergr hflights leaflet mindr plotly plumber pryr rcrossref selectr swirl tidytext tidygenomics tidygraph tm tweenr wordcloud xgboost \
+RUN install2.r animation blogdown caret citr cleanNLP corrplot DT e1071 feather flexdashboard formatR gapminder ggiraph ggraph ggrepel ggplot2movies gutenbergr hflights leaflet mindr plotly plumber pryr quanteda rcrossref selectr swirl tidytext tidygenomics tidygraph tm topicmodels tweenr wordcloud xgboost \
     && installGithub.r dgrtwo/gganimate yihui/xaringan dgrtwo/widyr StoreyLab/biobroom
 
 # swirl courses and bioconductor packages installed by Rscript

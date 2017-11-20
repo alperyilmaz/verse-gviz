@@ -30,6 +30,8 @@ docker run -d -p 8787:8787 -e USER="studentno" -e PASSWORD="studentpass" alperyi
 
 ## Play with Docker usage
 
+> UPDATE: In order to use *Play with Docker*, you need to login with a *DockerID*. Please sign up for one at Docker.com
+
 If you're low on disk space, using Windows or having slow internet connection, then you can try or use this container online. The authors of [Play With Docker](http://play-with-docker.com/) site, Marcos Lilljedahl and Jonathan Leibiusky, made it possible to run containers online with breeze (if interested in technical details please watch their [demo](https://www.youtube.com/watch?v=-h2VTE9WnZs#t=3m03s) at DockerCon 2017). 
 
 In order to use this container with Play with Docker:
