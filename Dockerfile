@@ -15,8 +15,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends imagemagick lib
 ## but still need to maintain a list for local install
 ## bookdown data.table devtools git2r igraph Lahman maps microbenchmark nycflights13 PKI RefManageR rmarkdown RMySQL rsconnect RSQLite shiny splines tidyverse zoo
 
-RUN install2.r animation blogdown caret citr cleanNLP corrplot DT e1071 feather flexdashboard formatR gapminder ggiraph ggraph ggrepel ggplot2movies gutenbergr hflights leaflet mindr plotly plumber pryr quanteda rcrossref selectr swirl tidytext tidygenomics tidygraph tm topicmodels tweenr wordcloud xgboost \
-    && installGithub.r dgrtwo/gganimate yihui/xaringan dgrtwo/widyr StoreyLab/biobroom
+RUN install2.r animation blogdown caret citr cleanNLP corrplot DT e1071 feather flexdashboard formatR gapminder ggiraph ggraph ggrepel ggplot2movies gutenbergr hflights leaflet mindr plotly plumber pryr quanteda rcrossref selectr swirl tidytext tidygraph tm topicmodels tweenr wordcloud xgboost \
+    && installGithub.r dgrtwo/gganimate yihui/xaringan dgrtwo/widyr
 
 # swirl courses and bioconductor packages installed by Rscript
 RUN > rscript.R \
@@ -33,4 +33,6 @@ RUN > rscript.R \
     && echo 'biocLite("TxDb.Mmusculus.UCSC.mm9.knownGene",ask=FALSE)' >> rscript.R \
     && echo 'biocLite("TxDb.Hsapiens.UCSC.hg19.knownGene",ask=FALSE)' >> rscript.R \
     && Rscript rscript.R \
+    && install2.r tidygenomics \
+    && installGithub.r StoreyLab/biobroom \
     && rm -rf /tmp/Rtmp*/downloaded_packages/*
